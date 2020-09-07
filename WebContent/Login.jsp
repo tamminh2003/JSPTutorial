@@ -20,7 +20,7 @@
 	
 	<body>
 		<div id="form-container">
-			<form action="Validate.jsp" method="get">
+			<form action="Validate.jsp" method="post">
 			
 				<p>
 					<label for="uname"><b>Username</b></label> <input type="text"
