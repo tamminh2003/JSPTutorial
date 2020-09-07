@@ -8,7 +8,14 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Insert title here</title>
+		<title>Validate.jsp</title>
+		<style>
+			p {
+				text-align: center;
+				font-weight: bold;
+				color: red;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -38,7 +45,7 @@
 	<c:forEach items="${result.rows}" var="r">
 		<c:choose>
 			<c:when test="${r.kount > 0}">
-				<c:out value="Welcome ${uname}!" />
+				<p> <c:out value="Welcome ${uname}!" /> </p>
 			</c:when>
 			<c:otherwise>
 				<c:out value="Sorry, we cannot find ${uname}, please check your username." />
