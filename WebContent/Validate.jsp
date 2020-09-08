@@ -23,7 +23,8 @@
 	<%	//JDBC driver name and database URL
 		//STEP 2: Register JDBC driver	%>
 	
-	<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/bookstore" user="root" password="mysql" />
+	<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver" 
+	url="jdbc:mysql://localhost:3306/bookstore" user="root" password="mysql" />
 	
 	<% //Getting Request parameters	%>
 	
@@ -45,10 +46,10 @@
 	<c:forEach items="${result.rows}" var="r">
 		<c:choose>
 			<c:when test="${r.kount > 0}">
-				<p> <c:out value="Welcome ${uname}!" /> </p>
+				<p><c:out value="Welcome ${uname}!" /></p>
 			</c:when>
 			<c:otherwise>
-				<c:out value="Sorry, we cannot find ${uname}, please check your username." />
+				<p><c:out value="Sorry, the username/password is incorrect for ${uname}, please check your username/password." /></p>
 			</c:otherwise>
 		</c:choose>
 	</c:forEach>	
